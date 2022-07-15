@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- invoke css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Parallax Effect</title>
+</head>
+<body>
+    <section>
+        <img src="img/bg.jpg" alt="" id="bg">
+        <img src="img/moon.png" alt="" id="moon">
+        
+        <img src="img/mountain.png" alt="" id="mountain">
+        <img src="img/road.png" alt="" id="road">
+        <h2 id="text">Sahithi Reddy</h2>
+       
+    </section>
+
+    <h3>Sahithi Reddy Aendapally</h3>
+    
+    <p>
+        <ul class="text-style">Key Skills
+        <li ><img src="img/c.png" alt="" class="skill-image">
+            <img src="img/java.png" alt="" class="skill-image">
+            <img src="img/python.png" alt="" class="skill-image"></li>
+            <li ><img src="img/sql.png" alt="" class="skill-image">
+                <img src="img/mongo.png" alt="" class="skill-image">
+               
+            </li>
+            <li ><img src="img/windows.jpeg" alt="" class="skill-image">
+                <img src="img/ubuntu.png" alt="" class="skill-image">
+               
+            </li>
+    </p>
+    <p>
+        <ul class="text-style">Strengths
+        <li>Excellent communication 
+            skill.</li>
+        <li>Ability to grasp the new skills quickly.</li>
+        <li>Hard-working.</li> 
+    <ul></p>
+
+    <script type="text/javascript">
+        let bg = document.getElementById("bg")
+        let moon = document.getElementById('moon')
+        let mountain = document.getElementById('mountain')
+        let road = document.getElementById('road')
+        let text = document.getElementById('text')
+
+        window.addEventListener("scroll", function(){
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            // text.style.top = value * 1 + 'px';
+             text.style.fontSize = (value/3)+ 'px';
+            
+        }
+      )
+
+    </script>
+
+</body>
+</html>
+
+
+
