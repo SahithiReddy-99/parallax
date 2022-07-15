@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- invoke css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Parallax Effect</title>
+</head>
+<body>
+    <section>
+        <img src="img/bg.jpg" alt="" id="bg">
+        <img src="img/moon.png" alt="" id="moon">
+        
+        <img src="img/mountain.png" alt="" id="mountain">
+        <img src="img/road.png" alt="" id="road">
+        <h2 id="text">Sahithi Reddy</h2>
+       
+    </section>
+
+    <h3>Sahithi Reddy Aendapally</h3>
+    
+    <p>
+        <ul>Key Skills
+        <li>Language: C, C++, Core JAVA, Adv JAVA, C# and ASP.NET.</li>
+        <li>Database: MySQL, PL/SQL, Oracle 9i.</li>
+        <li>Operating Systems: MS DOS, Windows 98/2000/xp.</li></ul>
+    </p>
+    <p>
+        <ul>Strengths
+        <li>Excellent communication skill.</li>
+        <li>Ability to grasp the new skills quickly.</li>
+        <li>Hard-working.</li> 
+    <ul></p>
+
+    <script type="text/javascript">
+        let bg = document.getElementById("bg")
+        let moon = document.getElementById('moon')
+        let mountain = document.getElementById('mountain')
+        let road = document.getElementById('road')
+        let text = document.getElementById('text')
+
+        window.addEventListener("scroll", function(){
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            // text.style.top = value * 1 + 'px';
+             text.style.fontSize = (value/3)+ 'px';
+            
+        })
+
+    </script>
+
+</body>
+</html>
+
+
+
+<!-- Key Skills
+Language: C, C++, Core JAVA, Adv JAVA, C# and ASP.NET.
+Database: MySQL, PL/SQL, Oracle 9i.
+Operating Systems: MS DOS, Windows 98/2000/xp.
+Strengths
+Excellent communication skill.
+Ability to grasp the new skills quickly.
+
+Excellent knowledge of Core subjects.
+Academic Qualification
+B.Tech (IT) from “XYZ University” with 79% in 20**.
+HSC from xyz school, CBSE board with 76% in 20**.
+SSC from xyz school, CBSE board with 78% in 20**. -->
